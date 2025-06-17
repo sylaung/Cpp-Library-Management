@@ -37,12 +37,12 @@ A console-based application for managing book records with persistent CSV storag
   - `Library.h/cpp`: File I/O and business logic
   - `main.cpp`: User interface and program flow
 
-## 📂 File Structure
+## File Structure
 
 lib-management-system/
-├── book.h # Book class interface
-├── book.cpp # Book method implementations
-├── library.h # Library function prototypes
-├── library.cpp # File operations and logic
-├── main.cpp # User interface driver
-└── library.csv # Auto-generated data storage
+- book.h # Book class interface
+- book.cpp # Book method implementations
+- library.h # Library function prototypes
+- library.cpp # File operations and logic
+- main.cpp # User interface driver
+- library.csv # Auto-generated data storage
