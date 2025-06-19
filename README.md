@@ -1,47 +1,34 @@
 # Library Management System (C++)
 
-A console-based application for managing book records with persistent CSV storage, built with modern C++.
+A console-based application to manage book records with persistent CSV storage. Built with modern C++ and object-oriented principles.
 
 ## Features
 
-- **Complete Book Management**
-  - Add new books with ISBN, title, author, and publication year
-  - Browse all books in the catalog
-  - Instant search by ISBN
-  - Edit existing book details
-  - Remove books from the system
+- Add books (ISBN, title, author, publication year)
+- Browse or search all books in the catalog
+- Save/load library data to/from CSV files
+- Input validation and clean terminal interface
 
-- **Reliable Data Storage**
-  - Automatic saving to `library.csv`
-  - Data preserved between sessions
-  - CSV format compatible with spreadsheet software
+## Design Overview
 
-- **User-Friendly Interface**
-  - Intuitive menu navigation
-  - Clear data presentation
-  - Input validation for data integrity
+- **OOP Architecture**
+  - `Book` class with core attributes (ISBN, title, author, year)
+  - Value semantics with RAII file handling
+  - Stream-based data serialization
 
-## System Design
-
-- **Object-Oriented Architecture**
-  - `Book` class encapsulates all book properties
-  - Separate header/implementation files for clean organization
-
-- **File Operations**
-  - CSV parsing using string streams
-  - Memory-efficient loading with `vector<Book>`
-  - Atomic save operations prevent data corruption
-
-- **Core Components**
-  - `book.h/cpp`: Data model and display logic
-  - `library.h/cpp`: File I/O and business logic
-  - `main.cpp`: User interface and program flow
+- **File I/O**
+  - CSV-based persistence with automatic loading/saving
+  - Unified `toCSV()` method for consistent formatting
+  - Atomic file updates to prevent corruption
 
 ## File Structure
 
-- **Core Components**:
-  - `book.h` / `book.cpp`: Book data model and methods
-  - `library.h` / `library.cpp`: File I/O and logic
-  - `main.cpp`: User interface driver
-- **Data**:
-  - `library.csv`: Persistent book storage (auto-generated)
+- `Book.h/cpp`: Book entity definition and display logic
+- `Library.h/cpp`: Core operations (CRUD, file management)
+- `main.cpp`: User interface with menu system
+
+## Data
+
+- CSV format: `ISBN,Title,Author,Year`
+- Compatible with spreadsheet software (Excel, Google Sheets)
+- Preserves data integrity during edits
