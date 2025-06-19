@@ -33,8 +33,8 @@ A console-based application for managing book records with persistent CSV storag
   - Atomic save operations prevent data corruption
 
 - **Core Components**
-  - `Book.h/cpp`: Data model and display logic
-  - `Library.h/cpp`: File I/O and business logic
+  - `book.h/cpp`: Data model and display logic
+  - `library.h/cpp`: File I/O and business logic
   - `main.cpp`: User interface and program flow
 
 ## File Structure
